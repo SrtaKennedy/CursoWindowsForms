@@ -27,6 +27,23 @@ namespace CursoWindowsFormsBiblioteca.Databases
             } 
         }
 
+        public DataTable SQLQuery(string SQL)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                var myCommand = new SqlCommand(SQL, connDB);
+                myCommand.CommandTimeout = 0;
+                var myReader = myCommand.ExecuteReader();
+                dt.Load(myReader);
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception(Ex.Message);
+            }
+            return dt;
+        }
+
         public string SQLCommand(string SQL)
         {
             try
@@ -40,6 +57,11 @@ namespace CursoWindowsFormsBiblioteca.Databases
             {
                 throw new Exception(Ex.Message);
             }
+        }
+
+        public void Close()
+        {
+            connDB.Close();
         }
     }
 }
