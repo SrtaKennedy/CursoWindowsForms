@@ -31,7 +31,6 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 status = false;
                 mensagem = "Conexão com o Fichario com erro: " + ex.Message;
             }
-          
         }
 
         public void Incluir(string Id, string jsonUnit)
@@ -56,7 +55,6 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 status = false;
                 mensagem = "Conexão com o Fichario com erro: " + ex.Message;
             }       
-
         }
 
         public string Buscar(string Id)
@@ -154,7 +152,6 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 status = false;
                 mensagem = "Conexão com o Fichario com erro: " + ex.Message;
             }
-
         }
     }
 }
