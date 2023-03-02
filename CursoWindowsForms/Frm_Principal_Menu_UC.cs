@@ -184,7 +184,7 @@ namespace CursoWindowsForms
 
         private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_Questao Db = new Frm_Questao("icons8_question_mark_961", "Você deseja se desconectar ?");
+            Frm_Questao Db = new Frm_Questao("icons8-ask-question-96", "Você deseja se desconectar?");
             Db.ShowDialog();
             //if (MessageBox.Show("Você deseja realmente validar o CPF?", "Mensagem de Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 

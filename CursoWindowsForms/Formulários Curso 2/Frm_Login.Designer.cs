@@ -41,6 +41,7 @@
             // 
             // Pic_Login
             // 
+            this.Pic_Login.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Pic_Login.Image = ((System.Drawing.Image)(resources.GetObject("Pic_Login.Image")));
             this.Pic_Login.Location = new System.Drawing.Point(12, 8);
             this.Pic_Login.Name = "Pic_Login";
@@ -106,6 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(279, 149);
             this.Controls.Add(this.Btn_Cancel);
             this.Controls.Add(this.Btn_OK);

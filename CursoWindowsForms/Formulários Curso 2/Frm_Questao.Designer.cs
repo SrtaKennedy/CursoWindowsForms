@@ -48,7 +48,7 @@
             // 
             // Btn_OK
             // 
-            this.Btn_OK.Location = new System.Drawing.Point(147, 60);
+            this.Btn_OK.Location = new System.Drawing.Point(162, 60);
             this.Btn_OK.Name = "Btn_OK";
             this.Btn_OK.Size = new System.Drawing.Size(115, 23);
             this.Btn_OK.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // Btn_Cancel
             // 
-            this.Btn_Cancel.Location = new System.Drawing.Point(147, 89);
+            this.Btn_Cancel.Location = new System.Drawing.Point(162, 89);
             this.Btn_Cancel.Name = "Btn_Cancel";
             this.Btn_Cancel.Size = new System.Drawing.Size(115, 23);
             this.Btn_Cancel.TabIndex = 2;
@@ -68,11 +68,12 @@
             // 
             // Pic_Imagem
             // 
-            this.Pic_Imagem.Image = global::CursoWindowsForms.Properties.Resources.icons8_question_mark_961;
+            this.Pic_Imagem.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Pic_Imagem.Image = ((System.Drawing.Image)(resources.GetObject("Pic_Imagem.Image")));
             this.Pic_Imagem.Location = new System.Drawing.Point(12, 32);
             this.Pic_Imagem.Name = "Pic_Imagem";
             this.Pic_Imagem.Size = new System.Drawing.Size(129, 107);
-            this.Pic_Imagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Pic_Imagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_Imagem.TabIndex = 3;
             this.Pic_Imagem.TabStop = false;
             // 
@@ -80,6 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(289, 151);
             this.Controls.Add(this.Pic_Imagem);
             this.Controls.Add(this.Btn_Cancel);
