@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -323,10 +338,16 @@
   <ItemGroup>
     <Content Include="Frm_Principal.ico" />
     <Content Include="Imagens\Cadastros.png" />
+    <None Include="Imagens\windows.png" />
+    <None Include="Imagens\conecte-se.png" />
     <Content Include="Imagens\DeleteAll.png" />
     <Content Include="Imagens\DeleteLeft.png" />
     <Content Include="Imagens\DeleteRight.png" />
     <Content Include="Imagens\DeleteTab.png" />
+    <None Include="Imagens\desconectar.png" />
+    <None Include="Imagens\estranho.gif" />
+    <None Include="Imagens\excluir.png" />
+    <None Include="Imagens\desligar.png" />
     <Content Include="Imagens\ExcluirBarra.png" />
     <Content Include="Imagens\Frm_DemonstracaoKey.ico" />
     <Content Include="Imagens\Frm_DemonstracaoKey.png" />
@@ -341,12 +362,22 @@
     <Content Include="Imagens\Frm_ValidaCPF2.png" />
     <Content Include="Imagens\Frm_ValidaSenha.ico" />
     <Content Include="Imagens\Frm_ValidaSenha.png" />
+    <None Include="Imagens\galeria32.png" />
     <Content Include="Imagens\icons8-ask-question-96.png" />
+    <None Include="Imagens\icons8-folder.png" />
+    <None Include="Imagens\icons8-folder-80.ico" />
+    <None Include="Imagens\icons8-folder-80.png" />
+    <None Include="Imagens\icons8-live-folder-80.png" />
     <Content Include="Imagens\icons8-question-mark-96.ico" />
     <Content Include="Imagens\icons8-question-mark-96.png" />
+    <None Include="Imagens\icons8-user-64.png" />
+    <None Include="Imagens\images-32.png" />
     <Content Include="Imagens\key.png" />
     <Content Include="Imagens\LimparBarra.png" />
     <Content Include="Imagens\money.png" />
+    <None Include="Imagens\novo-arquivo.png" />
+    <None Include="Imagens\pasta.png" />
+    <None Include="Imagens\trancar.gif" />
     <Content Include="Imagens\user.png" />
   </ItemGroup>
   <ItemGroup>
@@ -354,6 +385,18 @@
       <Project>{d619deb3-f971-4c2d-97a3-f62e9d5681ac}</Project>
       <Name>CursoWindowsFormsBiblioteca</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

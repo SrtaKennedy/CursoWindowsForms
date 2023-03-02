@@ -54,9 +54,9 @@ namespace CursoWindowsFormsBiblioteca.Databases
             status = true;
             try
             {
-                // SELECT ID, JSON FROM CLIENTE WHERE ID = '000001'
+                // SELECT ID, JSON FROM CLIENTE WHERE ID = '000010'
 
-                var SQL = "SELEC Id, JSON FROM " + tabela + " WHERE ID = '" + Id + "'";
+                var SQL = "SELECT Id, JSON FROM " + tabela + " WHERE ID = '" + Id + "'";
                 var dt = db.SQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {
@@ -70,6 +70,7 @@ namespace CursoWindowsFormsBiblioteca.Databases
                     status = false;
                     mensagem = "Identificador não existente: " + Id;
                 }
+
             }
             catch (Exception ex)
             {
@@ -87,13 +88,13 @@ namespace CursoWindowsFormsBiblioteca.Databases
             {
                 // SELECT ID, JSON FROM CLIENTE'
 
-                var SQL = "SELEC Id, JSON FROM " + tabela;
+                var SQL = "SELECT Id, JSON FROM " + tabela;
                 var dt = db.SQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {
                     for (int i = 0; i <= dt.Rows.Count - 1; i++)
                     {
-                        string conteudo = dt.Rows[1]["JSON"].ToString();
+                        string conteudo = dt.Rows[i]["JSON"].ToString();
                         List.Add(conteudo);
                     }
                     return List;
@@ -101,7 +102,7 @@ namespace CursoWindowsFormsBiblioteca.Databases
                 else
                 {
                     status = false;
-                    mensagem = "Não existe clientes na base de dados.";
+                    mensagem = "Não existem clientes na base de dados";
                 }
             }
             catch (Exception ex)
@@ -117,12 +118,12 @@ namespace CursoWindowsFormsBiblioteca.Databases
             status = true;
             try
             {
-                var SQL = "SELEC Id, JSON FROM " + tabela + " WHERE ID = '" + Id + "'";
+                var SQL = "SELECT Id, JSON FROM " + tabela + " WHERE ID = '" + Id + "'";
                 var dt = db.SQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {
 
-                    // DELETE FROM CLIENTE WHERE ID = '000010'
+                    // DELETE FROM CLIENTE WHERE ID = '00010'
 
                     SQL = "DELETE FROM " + tabela + " WHERE ID = '" + Id + "'";
                     db.SQLCommand(SQL);
@@ -147,14 +148,15 @@ namespace CursoWindowsFormsBiblioteca.Databases
             status = true;
             try
             {
-                var SQL = "SELEC Id, JSON FROM " + tabela + " WHERE ID = '" + Id + "'";
+
+                var SQL = "SELECT Id, JSON FROM " + tabela + " WHERE ID = '" + Id + "'";
                 var dt = db.SQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {
 
-                    // UPTADE CLIENTE SET JSON = '{...}' WHERE ID = '000010'
+                    // UPDATE CLIENTE SET JSON = '{...}' WHERE ID = '00010'
 
-                    SQL = "UPTADE " + tabela + " SET JSON = '" + jsonUnit + "' WHERE ID = '" + Id + "'";
+                    SQL = "UPDATE " + tabela + " SET JSON = '" + jsonUnit + "' WHERE ID = '" + Id + "'";
                     db.SQLCommand(SQL);
                     status = true;
                     mensagem = "Alteração efetuada com sucesso. Identificador: " + Id;
@@ -164,12 +166,14 @@ namespace CursoWindowsFormsBiblioteca.Databases
                     status = false;
                     mensagem = "Alteração não permitida porque o identificador não existe: " + Id;
                 }
+
             }
             catch (Exception ex)
             {
                 status = false;
                 mensagem = "Conexão com o Fichario com erro: " + ex.Message;
             }
+
         }
     }
 }

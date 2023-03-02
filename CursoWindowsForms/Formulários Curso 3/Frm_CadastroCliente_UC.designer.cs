@@ -54,6 +54,7 @@
             this.Lbl_NomeCliente = new System.Windows.Forms.Label();
             this.Txt_Codigo = new System.Windows.Forms.TextBox();
             this.Grp_Codigo = new System.Windows.Forms.GroupBox();
+            this.Btn_Busca = new System.Windows.Forms.Button();
             this.Grp_DadosPessoais = new System.Windows.Forms.GroupBox();
             this.Chk_TemPai = new System.Windows.Forms.CheckBox();
             this.Grp_Genero = new System.Windows.Forms.GroupBox();
@@ -71,7 +72,6 @@
             this.salvarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ApagatoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.LimpartoolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.Btn_Busca = new System.Windows.Forms.Button();
             this.Grp_Codigo.SuspendLayout();
             this.Grp_DadosPessoais.SuspendLayout();
             this.Grp_Genero.SuspendLayout();
@@ -287,6 +287,7 @@
             // 
             // Grp_Codigo
             // 
+            this.Grp_Codigo.BackColor = System.Drawing.Color.MintCream;
             this.Grp_Codigo.Controls.Add(this.Btn_Busca);
             this.Grp_Codigo.Controls.Add(this.Txt_Codigo);
             this.Grp_Codigo.Location = new System.Drawing.Point(12, 45);
@@ -296,8 +297,20 @@
             this.Grp_Codigo.TabStop = false;
             this.Grp_Codigo.Text = "groupBox1";
             // 
+            // Btn_Busca
+            // 
+            this.Btn_Busca.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.Btn_Busca.Location = new System.Drawing.Point(221, 17);
+            this.Btn_Busca.Name = "Btn_Busca";
+            this.Btn_Busca.Size = new System.Drawing.Size(91, 23);
+            this.Btn_Busca.TabIndex = 2;
+            this.Btn_Busca.Text = "button1";
+            this.Btn_Busca.UseVisualStyleBackColor = false;
+            this.Btn_Busca.Click += new System.EventHandler(this.Btn_Busca_Click);
+            // 
             // Grp_DadosPessoais
             // 
+            this.Grp_DadosPessoais.BackColor = System.Drawing.Color.MintCream;
             this.Grp_DadosPessoais.Controls.Add(this.Chk_TemPai);
             this.Grp_DadosPessoais.Controls.Add(this.Grp_Genero);
             this.Grp_DadosPessoais.Controls.Add(this.Txt_NomeCliente);
@@ -328,6 +341,7 @@
             // 
             // Grp_Genero
             // 
+            this.Grp_Genero.BackColor = System.Drawing.Color.PaleTurquoise;
             this.Grp_Genero.Controls.Add(this.Rdb_Indefinido);
             this.Grp_Genero.Controls.Add(this.Rdb_Feminino);
             this.Grp_Genero.Controls.Add(this.Rdb_Masculino);
@@ -372,6 +386,7 @@
             // 
             // Grp_Endereco
             // 
+            this.Grp_Endereco.BackColor = System.Drawing.Color.MintCream;
             this.Grp_Endereco.Controls.Add(this.Cmb_Estados);
             this.Grp_Endereco.Controls.Add(this.Lbl_Cidade);
             this.Grp_Endereco.Controls.Add(this.Txt_Cidade);
@@ -417,6 +432,7 @@
             // 
             // Grp_Outros
             // 
+            this.Grp_Outros.BackColor = System.Drawing.Color.MintCream;
             this.Grp_Outros.Controls.Add(this.Lbl_Telefone);
             this.Grp_Outros.Controls.Add(this.Txt_Telefone);
             this.Grp_Outros.Controls.Add(this.Lbl_RendaFamiliar);
@@ -432,6 +448,7 @@
             // 
             // Tls_Principal
             // 
+            this.Tls_Principal.BackColor = System.Drawing.Color.MintCream;
             this.Tls_Principal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoToolStripButton,
             this.abrirToolStripButton,
@@ -495,20 +512,11 @@
             this.LimpartoolStripButton.Text = "toolStripButton1";
             this.LimpartoolStripButton.Click += new System.EventHandler(this.LimpartoolStripButton_Click);
             // 
-            // Btn_Busca
-            // 
-            this.Btn_Busca.Location = new System.Drawing.Point(221, 17);
-            this.Btn_Busca.Name = "Btn_Busca";
-            this.Btn_Busca.Size = new System.Drawing.Size(91, 23);
-            this.Btn_Busca.TabIndex = 2;
-            this.Btn_Busca.Text = "button1";
-            this.Btn_Busca.UseVisualStyleBackColor = true;
-            this.Btn_Busca.Click += new System.EventHandler(this.Btn_Busca_Click);
-            // 
             // Frm_CadastroCliente_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.Controls.Add(this.Tls_Principal);
             this.Controls.Add(this.Grp_Outros);
             this.Controls.Add(this.Grp_Endereco);

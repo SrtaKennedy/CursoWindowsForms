@@ -487,7 +487,7 @@ namespace CursoWindowsForms
             {
                 Cliente.Unit C = new Cliente.Unit();
                 //var ListaBusca = C.BuscarFicharioTodos("C:\\WindowsForms\\Curso\\CursoWindowsForms\\Fichario");
-                var ListaBusca = C.BuscarFicharioTodos("Cliente");
+                var ListaBusca = C.BuscarFicharioDBTodosDB("Cliente");
                 Frm_Busca FForm = new Frm_Busca(ListaBusca);
                 FForm.ShowDialog();
                 if (FForm.DialogResult == DialogResult.OK)
